@@ -1,0 +1,7 @@
+.total-quantity-group::before {
+    display: none;
+}
+
+.total-quantity {
+    width: 140px;
+}
