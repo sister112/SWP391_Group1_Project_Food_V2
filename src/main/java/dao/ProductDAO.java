@@ -58,13 +58,12 @@ public class ProductDAO {
         return null;
     }
     
-    
-//    public static void main(String[] args) {
-//        ProductDAO pdao = new ProductDAO();
-//        List<Product> listProduct = pdao.getListProduct();
-//        for(Product product : listProduct) {
-//            System.out.println(product.getProductID()); 
-//        }
-//        System.out.println(listProduct.size());
-//    }
+    public static void main(String[] args) {
+        ProductDAO pdao = new ProductDAO();
+        List<Product> listProduct = pdao.getListProduct();
+        for(Product product : listProduct) {
+            System.out.println(product.getProductID()); 
+        }
+        System.out.println(listProduct.size());
+    }
 }

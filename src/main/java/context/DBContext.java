@@ -9,12 +9,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-
 /**
  *
  * @author NghiaHHCE160343@fpt.edu.vn
  */
 public class DBContext {
+
     // local host name 
     private static final String dbPrefix = "jdbc:sqlserver://LAPTOP-F7OGOM4I\\SQLEXPRESS01";
     // set port here
@@ -30,6 +30,7 @@ public class DBContext {
 
     /**
      * To connect with SQL server to process data.
+     *
      * @return a connection to SQL
      */
     public Connection getConnection() {
@@ -46,10 +47,10 @@ public class DBContext {
         }
         return conn;
     }
-    
-//    public static void main(String[] args) {
-//        DBContext db = new DBContext();
-//        Connection conn = db.getConnection();
-//        System.out.println(conn);
-//    }
+
+    public static void main(String[] args) {
+        DBContext db = new DBContext();
+        Connection conn = db.getConnection();
+        System.out.println(conn);
+    }
 }
