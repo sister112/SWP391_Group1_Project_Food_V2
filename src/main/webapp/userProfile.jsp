@@ -3,6 +3,7 @@
     Created on : Feb 12, 2023, 2:14:42 AM
     Author     : PC
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,11 +36,11 @@
 
                             <div class="form-control-group">
                                 <label class="form-text-label">Name:</label>
-                                <label>Le Van A</label>
+                                <label>${user.accountName}</label>
                             </div>
                             <div class="form-control-group">
                                 <label class="form-text-label">Date of birth:</label>
-                                <label>01/01/2022</label>
+                                <label>${user.userBirthday}</label>
                             </div>
                             <div class="form-control-group">
                                 <label class="form-text-label">Phone number:</label>
