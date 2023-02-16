@@ -44,15 +44,15 @@
                             </div>
                             <div class="form-control-group">
                                 <label class="form-text-label">Phone number:</label>
-                                <label>0932876543</label>
+                                <label>${user.accountPhone}</label>
                             </div>
                             <div class="form-control-group">
                                 <label class="form-text-label">Email:</label>
-                                <label>levana@gmail.com</label>
+                                <label>${user.accountEmail}</label>
                             </div>
                             <div class="form-control-group">
                                 <label class="form-text-label">Address:</label>
-                                <label>QL1A, An Bình, Ninh Kiều, Cần Thơ</label>
+                                <label>${user.accountAddress}</label>
                             </div>
 
                             <div class="form-btn-group">
