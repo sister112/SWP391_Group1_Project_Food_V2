@@ -31,7 +31,7 @@ public class LoadListProductInCartController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        int accountID = 4;
+        int accountID = 5;
         CartDAO cdao = new CartDAO();
         
         ArrayList<Cart> listCart = cdao.getListCartByAccountID(accountID);
