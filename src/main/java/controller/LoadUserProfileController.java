@@ -32,13 +32,15 @@ public class LoadUserProfileController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        // Set the account ID to retrieve the user for
         int accountID = 5;
+        // Create a new UserDAO instance and retrieve the user with the specified account ID
         UserDAO udao = new UserDAO();
         User user = udao.getUserByAccountID(accountID);
+        // Set the user attribute for the request and forward to the userProfile.jsp page
         request.setAttribute("user", user);
         request.getRequestDispatcher("userProfile.jsp").forward(request, response);
-      
-       
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
