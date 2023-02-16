@@ -14,6 +14,8 @@ public class Cart {
     private String cartQuantity; // Quantity of items in the cart
     private int productID; // ID of the product in the cart
     private int accountID; // ID of the account associated with the cart
+    private String productName; // Name of product
+    private String productLink; // Link image of product
 
     /**
      *
@@ -38,6 +40,62 @@ public class Cart {
         this.accountID = accountID;
     }
 
+    /**
+     *
+     * Constructs a new Cart object with specified values.
+     *
+     * @param cartID the ID of the cart.
+     * @param cartQuantity the quantity of items in the cart.
+     * @param productID the ID of the product in the cart.
+     * @param accountID the ID of the account associated with the cart.
+     * @param productName Name of the product
+     * @param productLink Link image of product
+     */
+    public Cart(int cartID, String cartQuantity, int productID, int accountID, String productName, String productLink) {
+        this.cartID = cartID;
+        this.cartQuantity = cartQuantity;
+        this.productID = productID;
+        this.accountID = accountID;
+        this.productName = productName;
+        this.productLink = productLink;
+    }
+
+    /**
+     *
+     * Get name of the product
+     *
+     * @return String name of the product
+     */
+    public String getProductName() {
+        return productName;
+    }
+
+    /**
+     *
+     * Set name of the product
+     *
+     * @param productName name of the product
+     */
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+    
+    /**
+     * Get link image of product
+     * @return productLink link image of product
+     */
+    public String getProductLink() {
+        return productLink;
+    }
+
+    /**
+     * Set link image of product
+     * @param productLink link image of product
+     */
+    public void setProductLink(String productLink) {
+        this.productLink = productLink;
+    }
+    
     /**
      *
      * Gets the ID of the cart.
