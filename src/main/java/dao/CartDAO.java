@@ -22,7 +22,7 @@ public class CartDAO {
     
     public ArrayList<Cart> getListCartByAccountID(int accountID) {
         try {
-            String query = "SELECT C.*, P.ProductName, P.ProductLinkImage FROM [CART] C JOIN [PRODUCT] P ON C.ProductID = P.ProductID \n" +
+            String query = "SELECT C.*, P.ProductName, P.ProductLinkImage ,P.ProductPrice, P.ProductSalePercent FROM [CART] C JOIN [PRODUCT] P ON C.ProductID = P.ProductID \n" +
                             "WHERE AccountID = ?";
             con = new DBContext().getConnection();
             ps = con.prepareStatement(query);
@@ -30,7 +30,7 @@ public class CartDAO {
             rs = ps.executeQuery();
             ArrayList<Cart> listCart = new ArrayList<>();
             while (rs.next()) {                
-                listCart.add(new Cart(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getString(5), rs.getString(6)));
+                listCart.add(new Cart(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getString(5), rs.getString(6), rs.getInt(7), rs.getInt(8)));
             }
             return listCart;
         } catch (Exception e) {

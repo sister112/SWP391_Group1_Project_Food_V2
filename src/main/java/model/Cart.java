@@ -16,6 +16,8 @@ public class Cart {
     private int accountID; // ID of the account associated with the cart
     private String productName; // Name of product
     private String productLink; // Link image of product
+    private int productPrice; // Price of product
+    private int productSalePercent; // Sale percent of product
 
     /**
      *
@@ -32,32 +34,60 @@ public class Cart {
      * @param cartQuantity the quantity of items in the cart.
      * @param productID the ID of the product in the cart.
      * @param accountID the ID of the account associated with the cart.
-     */
-    public Cart(int cartID, String cartQuantity, int productID, int accountID) {
-        this.cartID = cartID;
-        this.cartQuantity = cartQuantity;
-        this.productID = productID;
-        this.accountID = accountID;
-    }
-
-    /**
-     *
-     * Constructs a new Cart object with specified values.
-     *
-     * @param cartID the ID of the cart.
-     * @param cartQuantity the quantity of items in the cart.
-     * @param productID the ID of the product in the cart.
-     * @param accountID the ID of the account associated with the cart.
      * @param productName Name of the product
      * @param productLink Link image of product
+     * @param productPrice Price of the product
+     * @param productSalePercent Sale percent of the product
      */
-    public Cart(int cartID, String cartQuantity, int productID, int accountID, String productName, String productLink) {
+    public Cart(int cartID, String cartQuantity, int productID, int accountID, String productName, String productLink, int productPrice, int productSalePercent) {
         this.cartID = cartID;
         this.cartQuantity = cartQuantity;
         this.productID = productID;
         this.accountID = accountID;
         this.productName = productName;
         this.productLink = productLink;
+        this.productPrice = productPrice;
+        this.productSalePercent = productSalePercent;
+    }
+
+    /**
+     *
+     * Get price of the product
+     *
+     * @return int price of the product
+     */
+    public int getProductPrice() {
+        return productPrice;
+    }
+
+    /**
+     *
+     * Set price of the product
+     *
+     * @param productPrice price of the product
+     */
+    public void setProductPrice(int productPrice) {
+        this.productPrice = productPrice;
+    }
+
+    /**
+     *
+     * Get sale percent of the product
+     *
+     * @return int sale percent of the product
+     */
+    public int getProductSalePercent() {
+        return productSalePercent;
+    }
+
+    /**
+     *
+     * Set sale percent of the product
+     *
+     * @param productSalePercent sale percent of the product
+     */
+    public void setProductSalePercent(int productSalePercent) {
+        this.productSalePercent = productSalePercent;
     }
 
     /**
