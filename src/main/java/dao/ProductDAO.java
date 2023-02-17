@@ -38,7 +38,7 @@ public class ProductDAO {
             con = new DBContext().getConnection(); // open connection to SQL
             ps = con.prepareStatement(query); // move query from Netbeen to SQl
             rs = ps.executeQuery(); // the same with click to "excute" btn;
-            List<Product> list = new ArrayList<>(); //list product
+            List<Product> list = new ArrayList<>(); //list products
             while (rs.next()) {
                 list.add(new Product(
                         rs.getInt(1),
@@ -56,14 +56,5 @@ public class ProductDAO {
             e.getMessage();
         }
         return null;
-    }
-    
-    public static void main(String[] args) {
-        ProductDAO pdao = new ProductDAO();
-        List<Product> listProduct = pdao.getListProduct();
-        for(Product product : listProduct) {
-            System.out.println(product.getProductID()); 
-        }
-        System.out.println(listProduct.size());
     }
 }
