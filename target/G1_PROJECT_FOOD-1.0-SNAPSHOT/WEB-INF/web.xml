@@ -5,9 +5,8 @@
         <servlet-class>controller.HomeController</servlet-class>
     </servlet>
     <servlet>
-       <servlet-name>LoadListProductInCartController</servlet-name>
+        <servlet-name>LoadListProductInCartController</servlet-name>
         <servlet-class>controller.LoadListProductInCartController</servlet-class>
-    </servlet>
     </servlet>
     <servlet>
         <servlet-name>AddProductIntoCartFromHome</servlet-name>
@@ -18,7 +17,7 @@
         <url-pattern>/home</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-	<servlet-name>LoadListProductInCartController</servlet-name>
+        <servlet-name>LoadListProductInCartController</servlet-name>
         <url-pattern>/cart</url-pattern>
     </servlet-mapping>
     <servlet-mapping>

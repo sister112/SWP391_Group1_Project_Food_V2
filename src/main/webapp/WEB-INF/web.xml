@@ -5,7 +5,6 @@
         <servlet-class>controller.HomeController</servlet-class>
     </servlet>
     <servlet>
-        <servlet>
         <servlet-name>LoadListProductInCartController</servlet-name>
         <servlet-class>controller.LoadListProductInCartController</servlet-class>
     </servlet>
@@ -13,12 +12,11 @@
         <servlet-name>AddProductIntoCartFromHome</servlet-name>
         <servlet-class>controller.AddProductIntoCartFromHome</servlet-class>
     </servlet>
-    </servlet>
     <servlet-mapping>
         <servlet-name>HomeController</servlet-name>
         <url-pattern>/home</url-pattern>
     </servlet-mapping>
-        <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>LoadListProductInCartController</servlet-name>
         <url-pattern>/cart</url-pattern>
     </servlet-mapping>
